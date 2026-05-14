@@ -15,25 +15,6 @@ env:
   ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
 
 jobs:
-  terraform-plan-aws:
-    name: Terraform Plan - AWS
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./modules
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
-
-      - name: Terraform Init
-        run: terraform init
-
-      - name: Terraform Plan
-        run: terraform plan
-
   terraform-plan-azure:
     name: Terraform Plan - Azure
     runs-on: ubuntu-latest
