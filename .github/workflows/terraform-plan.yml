@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./stage-02-azure-vnet
+        working-directory: .
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
