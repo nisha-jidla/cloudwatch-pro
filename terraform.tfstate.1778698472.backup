@@ -1,0 +1,122 @@
+{
+  "version": 4,
+  "terraform_version": "1.15.3",
+  "serial": 30,
+  "lineage": "94022ca4-dd73-37c3-ce91-7c17eca23ce1",
+  "outputs": {
+    "azure_vm_public_ip": {
+      "value": "168.63.67.89",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "module": "module.vm",
+      "mode": "managed",
+      "type": "azurerm_public_ip",
+      "name": "main",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "allocation_method": "Static",
+            "ddos_protection_mode": "VirtualNetworkInherited",
+            "ddos_protection_plan_id": null,
+            "domain_name_label": null,
+            "edge_zone": "",
+            "fqdn": null,
+            "id": "/subscriptions/136b1b24-d7fe-4d33-88fe-7c56f5c30ba5/resourceGroups/cloudwatch-pro-dev-rg/providers/Microsoft.Network/publicIPAddresses/cloudwatch-pro-dev-pip",
+            "idle_timeout_in_minutes": 4,
+            "ip_address": "168.63.67.89",
+            "ip_tags": null,
+            "ip_version": "IPv4",
+            "location": "northeurope",
+            "name": "cloudwatch-pro-dev-pip",
+            "public_ip_prefix_id": null,
+            "resource_group_name": "cloudwatch-pro-dev-rg",
+            "reverse_fqdn": null,
+            "sku": "Standard",
+            "sku_tier": "Regional",
+            "tags": null,
+            "timeouts": null,
+            "zones": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "module.vnet.azurerm_resource_group.main"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.vnet",
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "main",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/136b1b24-d7fe-4d33-88fe-7c56f5c30ba5/resourceGroups/cloudwatch-pro-dev-rg",
+            "location": "northeurope",
+            "managed_by": "",
+            "name": "cloudwatch-pro-dev-rg",
+            "tags": {
+              "Environment": "dev",
+              "ManagedBy": "terraform",
+              "Project": "cloudwatch-pro"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjo1NDAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "module": "module.vnet",
+      "mode": "managed",
+      "type": "azurerm_virtual_network",
+      "name": "main",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address_space": [
+              "10.1.0.0/16"
+            ],
+            "bgp_community": "",
+            "ddos_protection_plan": [],
+            "dns_servers": [],
+            "edge_zone": "",
+            "encryption": [],
+            "flow_timeout_in_minutes": 0,
+            "guid": "7e6b40e9-d99a-4316-ad05-9a94287669a2",
+            "id": "/subscriptions/136b1b24-d7fe-4d33-88fe-7c56f5c30ba5/resourceGroups/cloudwatch-pro-dev-rg/providers/Microsoft.Network/virtualNetworks/cloudwatch-pro-dev-vnet",
+            "location": "northeurope",
+            "name": "cloudwatch-pro-dev-vnet",
+            "resource_group_name": "cloudwatch-pro-dev-rg",
+            "subnet": [],
+            "tags": {
+              "Name": "cloudwatch-pro-dev-vnet"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "module.vnet.azurerm_resource_group.main"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

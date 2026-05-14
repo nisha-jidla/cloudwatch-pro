@@ -1,0 +1,42 @@
+{
+  "version": 4,
+  "terraform_version": "1.15.3",
+  "serial": 32,
+  "lineage": "94022ca4-dd73-37c3-ce91-7c17eca23ce1",
+  "outputs": {
+    "azure_vm_public_ip": {
+      "value": "168.63.67.89",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "module": "module.vnet",
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "main",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/136b1b24-d7fe-4d33-88fe-7c56f5c30ba5/resourceGroups/cloudwatch-pro-dev-rg",
+            "location": "northeurope",
+            "managed_by": "",
+            "name": "cloudwatch-pro-dev-rg",
+            "tags": {
+              "Environment": "dev",
+              "ManagedBy": "terraform",
+              "Project": "cloudwatch-pro"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjo1NDAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
